@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body>
+    <div id="background">
+    </div>
+    {% include navigation.html %}
+    <main id="main">
+        <div id="main-wrapper">
+            <div id="page">
+                {{ content }}
+            </div>
+        </div>  
+    </main>
+    {% include footer.html %}
+</body>
+
+<script src="/assets/js/main.js"></script>
+</html>

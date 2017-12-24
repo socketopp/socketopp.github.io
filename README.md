@@ -1,2 +1,0 @@
-# SockeTopp.github.io
-Resumé

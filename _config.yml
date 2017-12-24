@@ -1,0 +1,15 @@
+title: sokrates.lamprou
+author: Sokrates Lamprou
+description: Fowler - a minimal, responsive Jekyll theme for programmers.
+url: http://sokrateslamprou.com
+
+lang: en
+timezone: Europe/Stockholm
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE.txt
+  - CHANGELOG.md
+  - vendor
+excerpt_separator: "<!-- more -->"
