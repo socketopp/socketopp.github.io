@@ -67,6 +67,30 @@
     margin-bottom: 8px;
 }
 
-.navmenu, .navbar-offcanvas{
-	max-width: 50% !important;
+
+
+/*.navbar-offcanvas{
+		width: 24% !important;
+
+}*/
+
+/*
+
+
+.navmenu{
+	width: 30% !important;
 }
+
+.navbar navbar-default navbar-fixed-top canvas-slid{
+	left: 156px !important;
+}
+
+.canvas-slid{
+    position: relative;
+    left:30%;
+    overflow: hidden;
+    right: -30%;
+}
+
+
+*/
