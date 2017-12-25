@@ -1,0 +1,72 @@
+#pageWrapper{
+
+	max-width:100%;
+	max-height: 100%;
+	margin: 0 auto;
+	display: block;
+
+}
+
+
+#mainWrapper {
+	max-width:50%;
+	max-height: inherit;
+	margin: 0 auto;
+	
+}
+
+#sidenav{
+	float:right;
+
+}
+
+#myNavmenu, #navBarResponsiveButton{
+	visibility: hidden;	
+}
+
+
+
+@media screen and (max-width: 600px) {
+  #sidenav {display: none;}
+  #myNavmenu, #navBarResponsiveButton{
+	visibility: visible;	}
+
+
+/*  .topnav a.icon {
+    float: right;
+    display: block;
+  }*/
+}
+
+
+@media (min-width: 576px) {
+	#sidenav{
+
+	}
+}
+
+#pageHeader{
+	margin-top:20%;
+	max-width:100%;
+
+}
+.navbar-default {
+    background-color: #FFFFFF!important;
+    border-color: #FFFFFF!important;
+    background-image: unset !important;
+    box-shadow: none !important;
+
+}
+
+.navbar-toggle {
+    position: relative;
+    float: left !important;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-left: 15px !important;
+    margin-bottom: 8px;
+}
+
+.navmenu, .navbar-offcanvas{
+	max-width: 50% !important;
+}
