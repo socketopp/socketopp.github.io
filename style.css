@@ -74,13 +74,13 @@
 
 }*/
 
-/*
 
 
-.navmenu{
+
+.navmenu, .navbar-offcanvas{
 	width: 30% !important;
 }
-
+/*
 .navbar navbar-default navbar-fixed-top canvas-slid{
 	left: 156px !important;
 }
@@ -91,6 +91,5 @@
     overflow: hidden;
     right: -30%;
 }
-
-
 */
+
