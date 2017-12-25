@@ -60,26 +60,37 @@
 
 .navbar-toggle {
     position: relative;
-    float: left !important;
+ 
     padding: 9px 10px;
     margin-top: 8px;
-    margin-left: 15px !important;
     margin-bottom: 8px;
+
+       float: left !important;
 }
 
 
 
+.navmenu, .navbar-offcanvas{
+    width: 30% !important;
+}
+.navbar {
+    position: relative;
+    margin-left: 10%;
+
+}
+
+    /*margin-left: 15px !important;*/
+
+
+
+
 /*.navbar-offcanvas{
-		width: 24% !important;
+        width: 24% !important;
 
 }*/
 
 
 
-
-.navmenu, .navbar-offcanvas{
-	width: 30% !important;
-}
 /*
 .navbar navbar-default navbar-fixed-top canvas-slid{
 	left: 156px !important;
