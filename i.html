@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="robots" content="index,follow,archive">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Slide out menu</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html {
+            font: 1em Helvetica, sans-serif;
+            font-weight: 200;
+            line-height: 1.4;
+        }
+        #app {
+            margin-left: 50px;
+        }
+        #nav-side {
+            background-color: cornflowerblue;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            max-width: 100%;
+            width: 50px;
+            padding-top: 50px;
+            overflow: hidden;
+            transition: width 0.2s ease-in-out;
+        }
+        #nav-side.nav__open {
+            width: 250px;
+        }
+        #nav-toggle {
+            background-color: cornflowerblue;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 50px;
+            height: 50px;
+        }
+        #nav-toggle span {
+            border-radius: 3px;
+            display: block;
+            margin: 8px;
+            width: 34px;
+            height: 6px;
+            background-color: #eee;
+            transition: transform 0.2s ease-in-out;
+        }
+        #nav-side.nav__open > #nav-toggle span:nth-child(1) {
+            transform: translateY(14px) rotate(45deg);
+        }
+        #nav-side.nav__open > #nav-toggle span:nth-child(2) {
+            visibility: hidden;
+        }
+        #nav-side.nav__open > #nav-toggle span:nth-child(3) {
+            transform: translateY(-14px) rotate(-45deg);
+        }
+        .nav__link {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .nav__link:hover {
+            background-color: royalblue;
+        }
+        .nav__link--icon {
+            text-align: center;
+            width: 50px;
+        }
+        .nav__link--content {
+            padding: 0 10px;
+            text-align: left;
+            width: 200px;
+        }
+        .nav__link--icon, .nav__link--content {
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+        }
+        @media screen and (max-width: 480px) {
+            #app {
+                margin-left: 0;
+                margin-top: 50px;
+            }
+            #nav-side {
+                width: 100%;
+                max-height: 50%;
+                height: 50px;
+                overflow-y: scroll;
+                padding-left: 0;
+                padding-top: 50px;
+            }
+            #nav-side.nav__open {
+                height: auto;
+                width: 100%;
+            }
+            .nav__link--content {
+                width: calc(100vw - 50px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="nav-side">
+        <div class="nav__link">
+            <div class="nav__link--icon">
+                I
+            </div
+            ><div class="nav__link--content">
+                Content
+            </div>
+        </div>
+        <div id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <div id="app">
+        MAIN CONTENT GOES HERE
+    </div>
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function () {
+            document.getElementById('nav-side').classList.toggle('nav__open');
+        });
+    </script>
+</body>

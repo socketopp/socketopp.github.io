@@ -1,0 +1,24 @@
+
+
+
+
+body{
+
+}
+
+#wrapper{
+
+    background-image: url("img/bg01.jpg");
+    opacity: 1;
+
+
+}
+
+
+#contentWrapper{
+
+    background-color: black;
+    height:100vh;
+}
+
+
