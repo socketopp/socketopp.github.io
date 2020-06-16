@@ -11,7 +11,7 @@ $base-font-family: Bitter, "Apple SD Gothic Neo", AppleGothic, NanumBarunGothic,
 $monospace-font-family: Monaco, Menlo, Consolas, "Courier New", DotumChe,
     monospace;
 $palm-font-size: 16px;
-$base-font-size: 17px;
+$base-font-size: 16px;
 $base-font-weight: 400;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -29,6 +29,7 @@ $grey-color-dark: darken($grey-color, 20%);
 // Width of the content area
 $content-width: 800px;
 
+$on-mobile: 335px;
 $on-palm: 600px;
 $on-laptop: 800px;
 
@@ -72,7 +73,7 @@ body {
     word-wrap: break-word;
 
     @include media-query($on-palm) {
-        font: $base-font-weight #{$palm-font-size}/#{$base-line-height}
+        font: $base-font-weight #{$base-font-size}/#{$base-line-height}
             $base-font-family;
     }
 }
@@ -206,23 +207,19 @@ p a {
 
     .nav-link {
         line-height: 1.5;
-        @include media-query($on-palm) {
-            margin-right: 5px;
-        }
 
         &:not(:last-child) {
             margin-right: 20px;
         }
     }
-
-    @include media-query($on-palm) {
-        .page-link {
-            padding: 20px 0;
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-            margin-left: 20px;
+    @include media-query($on-mobile) {
+    
+        line-height: 30px;
+    
+        &:not(:last-child) {
+            margin-right: 15px;
         }
+
     }
 }
 

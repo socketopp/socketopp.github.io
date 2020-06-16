@@ -3,7 +3,7 @@ let background = document.getElementById("background");
 let body = document.getElementsByTagName("body")[0];
 
 let renderBackground = () => {
-    let opacity = (Math.random() * (0.65 - 0.85) + 0.85).toFixed(4);
+    let opacity = (Math.random() * (0.65 - 0.80) + 0.80).toFixed(4);
     background.style.opacity = "1";
     setTimeout(() => {
         body.style.backgroundImage = "url(/assets/images/bg" + count + ".jpg)";
@@ -20,8 +20,6 @@ startInterval = (seconds, callback) => {
 
 window.onload = () => {
     let intervalId = startInterval(12, renderBackground);
-
-
 };
 
 // TODO: 
