@@ -10,3 +10,5 @@ gem "jekyll"
 
 
 gem 'tzinfo-data'
+
+gem 'public_suffix', '~> 3.0', '>= 3.0.2'   
