@@ -1,16 +1,8 @@
 name: Deploy to GitHub Pages
 
 on:
-  workflow_dispatch:
   push:
-    branches:
-      - master
-    paths:
-      - './'
-      - '.github/workflows/deploy.yml'
-defaults:
-  run:
-    working-directory: './'
+    branches: 'master'
 
 jobs:
   build_site:
@@ -19,11 +11,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      # If you're using pnpm, add this step then change the commands and cache key below to use `pnpm`
+      # - name: Install pnpm
+      #   uses: pnpm/action-setup@v2
+      #   with:
+      #     version: 8
+
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
+          cache: npm
 
       - name: Install dependencies
         run: npm install
@@ -36,9 +34,9 @@ jobs:
           touch build/.nojekyll
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-pages-artifact@v1
         with:
-          name: build-artifact
+          # this should match the `pages` option in your adapter-static options
           path: 'build/'
 
   deploy:
@@ -56,4 +54,4 @@ jobs:
     steps:
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v1
