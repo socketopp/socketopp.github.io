@@ -651,3 +651,103 @@ style:transform={`translate3d(0, ${scroll * -2}px, 0)`}
 
 <a href="https://codepen.io/collection/DxkYzq" target="_blank" class="btn btn_works">My Works</a>
 <button class="btn" id="fullscr">Go Fullscreen</button>
+<script>
+	import sky from '$lib/assets/range/sky.png';
+	import foreground from '$lib/assets/range/foreground.png';
+	import orange_valley from '$lib/assets/range/orange_valley.png';
+	import pink_valley from '$lib/assets/range/pink_valley.png';
+	import purple_valley from '$lib/assets/range/purple_valley.png';
+	import sun from '$lib/assets/range/sun.png';
+	import birds from '$lib/assets/range/birds.png';
+	import { isFirefox } from '../lib/Browser';
+
+	console.log('isFirefox', isFirefox);
+
+	let scroll;
+	let speed = 0.4;
+</script>
+
+<svelte:window bind:scrollY={scroll} />
+
+<section class="h-screen overflow-x-hidden overflow-y-auto parallax_container">
+	<header class="relative flex justify-center items-center h-full z-[-1]">
+		<div
+			style={`background-image: url(${sky})`}
+			class="absolute h-full w-full object-cover z-[-1]"
+			style:transform={'translateZ(-10px)'}
+			style:scale={2}
+		/>
+		<div
+			style={`background-image: url(${sun})`}
+			class="absolute h-full w-full object-cover z-[-6]"
+			style:transform={'translateZ(-5px)'}
+			style:scale={1.5}
+		/>
+		<div
+			style={`background-image: url(${orange_valley})`}
+			class="absolute h-full w-full object-cover z-[-5]"
+			style:transform={'translateZ(-5px)'}
+			style:scale={1.5}
+		/>
+		<div
+			style={`background-image: url(${birds})`}
+			class="absolute h-full w-full object-cover z-[-4]"
+			style:transform={'translateZ(-5px)'}
+			style:scale={1.5}
+		/>
+		<div
+			style={`background-image: url(${pink_valley})`}
+			class="absolute h-full w-full object-cover z-[-3]"
+			style:transform={'translateZ(-5px)'}
+			style:scale={1.5}
+		/>
+		<div
+			style={`background-image: url(${purple_valley})`}
+			class="absolute h-full w-full object-cover z-[-2]"
+			style:transform={'translateZ(-5px)'}
+			style:scale={1.5}
+		/>
+		<div
+			style={`background-image: url(${foreground})`}
+			class="absolute h-full w-full object-cover z-[-1]"
+			style:transform={'translateZ(-5px)'}
+			style:scale={1.5}
+		/>
+
+		<h1 class="text-[#40002c] text-6xl font-carter font-normal">Welcome</h1>
+	</header>
+
+	<div
+		class="text-white w-full h-[900px]"
+		class:bg-mozilla={isFirefox}
+		class:bg-chrome={!isFirefox}
+	>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+		labore et dolore magna aliqua. Adipiscing vitae proin sagittis nisl rhoncus. Suspendisse potenti
+		nullam ac tortor. Eget mi proin sed libero enim sed faucibus turpis in. Amet nisl suscipit
+		adipiscing bibendum. Dictum at tempor commodo ullamcorper a lacus vestibulum sed. Dis parturient
+		montes nascetur ridiculus mus mauris. Felis bibendum ut tristique et egestas quis ipsum
+		suspendisse. Sollicitudin aliquam ultrices sagittis orci a. Tortor aliquam nulla facilisi cras
+		fermentum odio eu feugiat. Cursus euismod quis viverra nibh. Turpis egestas maecenas pharetra
+		convallis posuere morbi. Dui sapien eget mi proin. Enim blandit volutpat maecenas volutpat
+		blandit aliquam etiam erat velit. Varius morbi enim nunc faucibus a pellentesque sit amet
+		porttitor. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare. Adipiscing
+		bibendum est ultricies integer quis auctor elit sed vulputate. Sed pulvinar proin gravida
+		hendrerit. Vestibulum sed arcu non odio euismod lacinia at. Condimentum id venenatis a
+		condimentum vitae sapien pellentesque. Feugiat pretium nibh ipsum consequat nisl. Felis
+		imperdiet proin fermentum leo vel. Cursus vitae congue mauris rhoncus. Vulputate eu scelerisque
+		felis imperdiet. Adipiscing bibendum est ultricies integer quis auctor elit sed vulputate. Enim
+		sed faucibus turpis in eu mi. Amet cursus sit amet dictum sit. Vitae semper quis lectus nulla at
+		volutpat diam. Ornare arcu odio ut sem nulla. Tellus elementum sagittis vitae et leo duis ut
+	</div>
+</section>
+
+<style lang="postcss">
+	.parallax_container {
+		perspective: 10px;
+	}
+
+	header {
+		transform-style: preserve-3d;
+	}
+</style>
