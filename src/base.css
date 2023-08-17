@@ -1,0 +1,14 @@
+body,
+html {
+	/* min-height: 100vh; */
+	margin: 0;
+	/* background-attachment: fixed; */
+	/* background: #270d2a; */
+	/* color: #fff; */
+	/* min-height: 200vh; */
+	/* background-color: #fedcc8; */
+}
+
+* {
+	box-sizing: border-box;
+}
