@@ -10,7 +10,8 @@ const config = {
 		adapter: adapter(),
 
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/socketopp.github.io' : ''
+			// base: process.env.NODE_ENV === 'production' ? '/socketopp.github.io' : '',
+			base: dev ? '' : process.env.BASE_PATH
 		}
 	},
 	preprocess: vitePreprocess()
