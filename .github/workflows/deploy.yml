@@ -1,9 +1,16 @@
 name: Deploy to GitHub Pages
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
+    paths:
+      - './'
+      - '.github/workflows/deploy.yml'
+defaults:
+  run:
+    working-directory: './'
 
 jobs:
   build_site:
