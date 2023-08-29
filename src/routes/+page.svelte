@@ -1,11 +1,11 @@
 <script>
-	import { isFirefox } from '../lib/Browser';
+	import { isFirefox } from '$lib/Browser';
 
 	import sky from '$lib/assets/firewatch/v3/sky.png';
 	import foreground from '$lib/assets/firewatch/v3/foreground.png';
 	import forrest from '$lib/assets/firewatch/v3/forrest.png';
 	import peak from '$lib/assets/firewatch/v3/peak.png';
-	import { avatar, bio, name } from '$lib/info.js';
+	import { avatar, bio, name } from '$lib/info';
 	import SocialLinks from '$lib/components/SocialLinks.svelte';
 
 	let scroll;
