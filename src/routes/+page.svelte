@@ -57,7 +57,9 @@
 	>
 		<section class="flex flex-col items-center gap-16 pb-16">
 			<div class="flex flex-col items-center w-full gap-6 rounded-lg">
-				<h1 class="text-white text-5xl font-carter mb-4 font-bold">Welcome to my Github page</h1>
+				<h1 class="text-white text-5xl font-carter mb-4 font-bold text-center">
+					Welcome to my Github page
+				</h1>
 				<img
 					src={avatar}
 					alt={name}
