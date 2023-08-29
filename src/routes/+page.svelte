@@ -1,15 +1,14 @@
 <script>
-	import sky from '$lib/assets/range/sky.png';
-	import foreground from '$lib/assets/range/foreground.png';
-	import orange_valley from '$lib/assets/range/orange_valley.png';
-	import pink_valley from '$lib/assets/range/pink_valley.png';
-	import purple_valley from '$lib/assets/range/purple_valley.png';
-	import sun from '$lib/assets/range/sun.png';
-	import birds from '$lib/assets/range/birds.png';
 	import { isFirefox } from '../lib/Browser';
 
-	console.log('isFirefox', isFirefox);
+	import sky from '$lib/assets/firewatch/v3/sky.png';
+	import foreground from '$lib/assets/firewatch/v3/foreground.png';
+	import forrest from '$lib/assets/firewatch/v3/forrest.png';
+	import peak from '$lib/assets/firewatch/v3/peak.png';
+	import { avatar, bio, name } from '$lib/info.js';
+	import SocialLinks from '$lib/components/SocialLinks.svelte';
 
+	console.log('isFirefox', isFirefox);
 	let scroll;
 	let speed = 0.4;
 </script>
@@ -18,70 +17,62 @@
 
 <section class="h-screen">
 	<header
-		class="relative flex justify-center items-center h-full z-[-10] overflow-x-hidden overflow-y-auto"
+		class="relative flex justify-center items-center h-screen z-[-10] overflow-x-hidden overflow-y-auto"
 	>
 		<div
 			style={`background-image: url(${sky})`}
-			class="fixed h-full w-full object-cover z-[-1]"
-			style:transform={`translate3d(0, ${scroll * 0.9}px, 0)`}
-		/>
-		<div
-			style={`background-image: url(${sun})`}
-			class="fixed h-full w-full object-cover z-[-1]"
-			style:transform={`translate3d(${scroll * 0.05}px, ${scroll * 1.09}px, 0)`}
-		/>
-		<div
-			style={`background-image: url(${orange_valley})`}
-			class="fixed h-full w-full object-cover z-[-1]"
+			class="bg-no-repeat fixed h-full w-full bg-cover z-[-1]"
 			style:transform={`translate3d(0, ${scroll * 0.9}px, 0)`}
 		/>
 
 		<div
-			style={`background-image: url(${pink_valley})`}
-			class="fixed h-full w-full object-cover z-[-1]"
+			style={`background-image: url(${peak})`}
+			class="bg-no-repeat fixed h-full w-full bg-cover z-[-1]"
 			style:transform={`translate3d(0, ${scroll * 0.8}px, 0)`}
 		/>
+
 		<div
-			style={`background-image: url(${purple_valley})`}
-			class="fixed h-full w-full object-cover z-[-1]"
+			style={`background-image: url(${forrest})`}
+			class="bg-no-repeat fixed h-full w-full bg-cover z-[-1]"
 			style:transform={`translate3d(0, ${scroll * 0.6}px, 0)`}
 		/>
-		<div
-			style={`background-image: url(${birds})`}
-			class="fixed h-full w-full object-cover z-[-1] top-[5rem] right-[30rem]"
-			style:transform={`translate3d( ${scroll * 0.5}px, ${scroll * 0.8}px, ${scroll * 4}px)`}
-		/>
+		<h1
+			class="text-6xl font-carter font-bold fixed px-4 top-[5rem] sm:top-[8rem] md:top-[10rem]
+	 z-[-1]"
+			style:transform={`translate3d(0, ${scroll * 1}px, 0)`}
+			class:text-mozilla={isFirefox}
+			class:text-chrome={!isFirefox}
+		>
+			Looking for directions?
+		</h1>
 		<div
 			style={`background-image: url(${foreground})`}
-			class="fixed h-full w-full object-cover z-[-1]"
-			style:transform={`translate3d(0, ${scroll * 0.1}px, 0)`}
+			class="bg-no-repeat fixed h-full w-full bg-cover z-[-1]"
+			style:transform={`translate3d(0, ${scroll * 0.009}px, 0)`}
 		/>
-
-		<h1 class="text-[#40002c] text-6xl font-carter font-normal">Welcome</h1>
 	</header>
 
 	<div
-		class="text-white w-full h-[900px]"
+		class="text-white w-full h-[700px] p-4 sm:p-20"
 		class:bg-mozilla={isFirefox}
 		class:bg-chrome={!isFirefox}
 	>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Adipiscing vitae proin sagittis nisl rhoncus. Suspendisse potenti
-		nullam ac tortor. Eget mi proin sed libero enim sed faucibus turpis in. Amet nisl suscipit
-		adipiscing bibendum. Dictum at tempor commodo ullamcorper a lacus vestibulum sed. Dis parturient
-		montes nascetur ridiculus mus mauris. Felis bibendum ut tristique et egestas quis ipsum
-		suspendisse. Sollicitudin aliquam ultrices sagittis orci a. Tortor aliquam nulla facilisi cras
-		fermentum odio eu feugiat. Cursus euismod quis viverra nibh. Turpis egestas maecenas pharetra
-		convallis posuere morbi. Dui sapien eget mi proin. Enim blandit volutpat maecenas volutpat
-		blandit aliquam etiam erat velit. Varius morbi enim nunc faucibus a pellentesque sit amet
-		porttitor. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare. Adipiscing
-		bibendum est ultricies integer quis auctor elit sed vulputate. Sed pulvinar proin gravida
-		hendrerit. Vestibulum sed arcu non odio euismod lacinia at. Condimentum id venenatis a
-		condimentum vitae sapien pellentesque. Feugiat pretium nibh ipsum consequat nisl. Felis
-		imperdiet proin fermentum leo vel. Cursus vitae congue mauris rhoncus. Vulputate eu scelerisque
-		felis imperdiet. Adipiscing bibendum est ultricies integer quis auctor elit sed vulputate. Enim
-		sed faucibus turpis in eu mi. Amet cursus sit amet dictum sit. Vitae semper quis lectus nulla at
-		volutpat diam. Ornare arcu odio ut sem nulla. Tellus elementum sagittis vitae et leo duis ut
+		<section class="flex flex-col items-center gap-16 pb-16">
+			<div class="flex flex-col items-center w-full gap-6 rounded-lg">
+				<h1 class="text-white text-5xl font-carter mb-4 font-bold">Welcome to my Github page</h1>
+				<img
+					src={avatar}
+					alt={name}
+					class="mx-auto rounded-full w-48 h-48 ring-2 ring-zinc-200 dark:ring-zinc-700"
+				/>
+				<div class="flex gap-6">
+					<SocialLinks />
+				</div>
+				<p class="max-w-3xl min-w-md text-base sm:text-lg text-white dark:text-zinc-400">
+					{bio}
+				</p>
+			</div>
+		</section>
 	</div>
 </section>
 
