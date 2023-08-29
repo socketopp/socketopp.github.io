@@ -74,10 +74,6 @@
 
 {#if homepage}
 	<a href="https://sokrateslamprou.com" class="group" aria-label="See my website">
-		<!-- <div
-			class="rounded-md justify-center text-center flex w-6 h-6 transition bg-zinc-500 group-hover:bg-zinc-600 dark:bg-zinc-400 dark:group-hover:bg-zinc-300"
-		>
-		</div> -->
 		<img
 			class="hover:drop-md rounded-md justify-center text-center flex w-6 h-6 transition bg-zinc-500 group-hover:bg-zinc-600 dark:bg-zinc-400 dark:group-hover:bg-zinc-300"
 			src={homepage}

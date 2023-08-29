@@ -8,9 +8,7 @@
 	import { avatar, bio, name } from '$lib/info.js';
 	import SocialLinks from '$lib/components/SocialLinks.svelte';
 
-	console.log('isFirefox', isFirefox);
 	let scroll;
-	let speed = 0.4;
 </script>
 
 <svelte:window bind:scrollY={scroll} />
