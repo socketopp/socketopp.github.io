@@ -1,21 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Lora&family=Merriweather:wght@300&display=swap');
 
 @import './base.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* @layer components {
-	.parallax {
-		@apply h-[2000px] overflow-x-hidden overflow-y-auto absolute top-0 right-0 bottom-0;
-	}
-	.parallax__layer {
-		@apply absolute top-0 right-0 bottom-0 left-0;
-	} 
-} */
-
-/* @layer base {
-	html {
-		font-family: Carter + One, system-ui, sans-serif;
-	}
-} */

@@ -9,7 +9,9 @@ export default {
 				chrome: '#280003'
 			},
 			fontFamily: {
-				carter: 'Carter One, New times roman'
+				carter: 'Carter One, New times roman',
+				meriweather: 'Merriweather, New times roman',
+				lora: 'Lora, New times roman'
 			}
 		}
 	},
