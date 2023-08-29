@@ -5,8 +5,8 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				mozilla: '#270D2A',
-				chrome: '#2C0B2D'
+				mozilla: '#240108',
+				chrome: '#280003'
 			},
 			fontFamily: {
 				carter: 'Carter One, New times roman'
