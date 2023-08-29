@@ -53,7 +53,7 @@
 	</header>
 
 	<div
-		class="text-white w-full h-[700px] p-4 sm:p-20"
+		class="text-white w-full h-[800px] p-4 sm:p-20"
 		class:bg-mozilla={isFirefox}
 		class:bg-chrome={!isFirefox}
 	>
