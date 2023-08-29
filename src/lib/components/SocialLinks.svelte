@@ -1,5 +1,6 @@
 <script>
-	import { linkedin, instagram, twitter, github, resume, homepage } from '$lib/info';
+	import { linkedin, instagram, twitter, github, resume } from '$lib/info';
+	import homepage from '$lib/assets/images/page_icon.jpg';
 </script>
 
 {#if twitter}
