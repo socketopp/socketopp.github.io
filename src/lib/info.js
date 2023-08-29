@@ -11,7 +11,7 @@ export const name = `${firstName} ${lastName}`;
 
 // Used for the landing page & footer of posts
 import avatar from '$lib/assets/cv_img_crop.jpg';
-import homepage from '$lib/assets/page_icon.png';
+import homepage from '$lib/assets/page_icon.jpg';
 
 export { avatar, homepage };
 
@@ -28,4 +28,4 @@ export const github = 'socketopp';
 export const twitter = 'socketopp';
 export const linkedin = '/in/sokrates-lamprou-93086264/';
 export const instagram = '';
-export const resume = undefined;
+export const resume = '';
