@@ -73,7 +73,7 @@
 {/if}
 
 {#if homepage}
-	<a href="https://sokrateslamprou.com" class="group" aria-label="See my website">
+	<a href="https://sahl.dev" class="group" aria-label="See my website">
 		<img
 			class="hover:drop-md rounded-md justify-center text-center flex w-6 h-6 transition bg-zinc-500 group-hover:bg-zinc-600 dark:bg-zinc-400 dark:group-hover:bg-zinc-300"
 			src={homepage}

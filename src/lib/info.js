@@ -16,10 +16,9 @@ import homepage from '$lib/assets/page_icon.jpg';
 export { avatar, homepage };
 
 export const bio = `\
-I’m ${firstName}, a software developer based in Sweden.
-Got a passion for writing code and on my way of becoming
-a indiehacker full-time someday. Currently working on Failedge and Distjobs. 
-`;
+I'm ${firstName}, a fullstack developer based in Sweden with a passion for building useful things.
+By day, I work with Ruby on Rails and MobX, crafting robust web applications. By night, you'll find me tinkering on side projects and exploring new technologies.
+Currently diving deep into Svelte and loving every bit of it. I'm a big advocate for open source and enjoy learning new things that push the boundaries of what's possible.`;
 
 // Your social usernames, empty strings won't be used.
 // For sake of the live demo, I'm using `username/repo` for github,
