@@ -11,9 +11,8 @@ export const name = `${firstName} ${lastName}`;
 
 // Used for the landing page & footer of posts
 import avatar from '$lib/assets/cv_img_crop.jpg';
-import homepage from '$lib/assets/page_icon.jpg';
 
-export { avatar, homepage };
+export { avatar };
 
 export const bio = `\
 I'm ${firstName}, a fullstack developer based in Sweden with a passion for building useful things.

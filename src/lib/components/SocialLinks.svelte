@@ -1,9 +1,15 @@
 <script>
-	import { linkedin, instagram, twitter, github, resume, homepage } from '$lib/info';
+	import { linkedin, instagram, twitter, github, resume } from '$lib/info';
+	import WebsiteIcon from '../assets/svg/WebsiteIcon.svelte';
 </script>
 
 {#if twitter}
-	<a href={`https://twitter.com/${twitter}`} class="group" aria-label="Follow on Twitter">
+	<a
+		href={`https://twitter.com/${twitter}`}
+		class="group"
+		aria-label="Follow on Twitter"
+		target="_blank"
+	>
 		<svg
 			viewBox="0 0 24 24"
 			aria-hidden="true"
@@ -17,7 +23,12 @@
 {/if}
 
 {#if instagram}
-	<a href={`https://instagram.com/${instagram}`} class="group" aria-label="Follow on Instagram">
+	<a
+		href={`https://instagram.com/${instagram}`}
+		class="group"
+		aria-label="Follow on Instagram"
+		target="_blank"
+	>
 		<svg
 			viewBox="0 0 24 24"
 			aria-hidden="true"
@@ -34,7 +45,12 @@
 {/if}
 
 {#if github}
-	<a href={`https://github.com/${github}`} class="group" aria-label="Follow on GitHub">
+	<a
+		href={`https://github.com/${github}`}
+		class="group"
+		aria-label="Follow on GitHub"
+		target="_blank"
+	>
 		<svg
 			viewBox="0 0 24 24"
 			aria-hidden="true"
@@ -50,7 +66,12 @@
 {/if}
 
 {#if linkedin}
-	<a href={`https://linkedin.com/${linkedin}`} class="group" aria-label="Follow on LinkedIn">
+	<a
+		href={`https://linkedin.com/${linkedin}`}
+		class="group"
+		aria-label="Follow on LinkedIn"
+		target="_blank"
+	>
 		<svg
 			viewBox="0 0 24 24"
 			class="w-6 h-6 transition fill-zinc-500 group-hover:fill-blue-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300"
@@ -63,7 +84,7 @@
 {/if}
 
 {#if resume}
-	<a href={resume} class="group" aria-label="Read my resume">
+	<a href={resume} class="group" aria-label="Read my resume" target="_blank">
 		<div
 			class="rounded-md justify-center text-center flex w-6 h-6 transition bg-zinc-500 group-hover:bg-zinc-600 dark:bg-zinc-400 dark:group-hover:bg-zinc-300"
 		>
@@ -72,12 +93,6 @@
 	</a>
 {/if}
 
-{#if homepage}
-	<a href="https://sahl.dev" class="group" aria-label="See my website">
-		<img
-			class="hover:drop-md rounded-md justify-center text-center flex w-6 h-6 transition bg-zinc-500 group-hover:bg-zinc-600 dark:bg-zinc-400 dark:group-hover:bg-zinc-300"
-			src={homepage}
-			alt="homepage"
-		/>
-	</a>
-{/if}
+<a href="https://sahl.dev" class="group" aria-label="See my website" target="_blank">
+	<WebsiteIcon />
+</a>
